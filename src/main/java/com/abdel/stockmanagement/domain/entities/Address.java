@@ -6,13 +6,14 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Embeddable;
+import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 @Embeddable
-public class Address {
+public class Address implements Serializable {
     private String address1;
     private String address2;
     private String city;
