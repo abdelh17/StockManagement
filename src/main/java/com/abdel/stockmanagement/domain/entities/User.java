@@ -1,9 +1,5 @@
 package com.abdel.stockmanagement.domain.entities;
 
-import com.abdel.stockmanagement.domain.entities.AbstractEntity;
-import com.abdel.stockmanagement.domain.entities.Address;
-import com.abdel.stockmanagement.domain.entities.Company;
-import com.abdel.stockmanagement.domain.entities.Roles;
 import lombok.*;
 
 import javax.persistence.*;

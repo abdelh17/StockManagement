@@ -2,7 +2,10 @@ package com.abdel.stockmanagement.domain.entities;
 
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.List;
 
 @Data
