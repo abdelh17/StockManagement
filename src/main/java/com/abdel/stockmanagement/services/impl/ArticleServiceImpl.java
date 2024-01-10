@@ -6,7 +6,6 @@ import com.abdel.stockmanagement.exceptions.EntityNotFoundException;
 import com.abdel.stockmanagement.exceptions.ErrorCodes;
 import com.abdel.stockmanagement.exceptions.InvalidEntityException;
 import com.abdel.stockmanagement.mappers.Mapper;
-import com.abdel.stockmanagement.mappers.impl.ArticleMapperImpl;
 import com.abdel.stockmanagement.repositories.ArticleRepository;
 import com.abdel.stockmanagement.services.ArticleService;
 import com.abdel.stockmanagement.validators.ArticleValidator;
@@ -63,7 +62,7 @@ public class ArticleServiceImpl implements ArticleService {
             log.error("Article code is null");
             return null;
         }
-        Optional<Article> article = articleRepository.findArticleByArticleCode(articleCode);
+        Optional<Article> article = articleRepository.findArticleByCodeArticle(articleCode);
         ArticleDto dto = articleMapper.fromEntity(article.get());
         return Optional.of(dto).orElseThrow(() ->
                 new EntityNotFoundException("No article with code: " + articleCode + " has been found.", ErrorCodes.ARTICLE_NOT_FOUND));
