@@ -2,6 +2,8 @@ package com.abdel.stockmanagement.repositories;
 
 import com.abdel.stockmanagement.domain.entities.Sale;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface SaleRepository extends JpaRepository<Integer, Sale> {
+@Repository
+public interface SaleRepository extends JpaRepository<Sale, Integer> {
 }

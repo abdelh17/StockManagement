@@ -2,6 +2,8 @@ package com.abdel.stockmanagement.repositories;
 
 import com.abdel.stockmanagement.domain.entities.Company;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface CompanyRepository extends JpaRepository<Integer, Company> {
+@Repository
+public interface CompanyRepository extends JpaRepository<Company, Integer> {
 }
