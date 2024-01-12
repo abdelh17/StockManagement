@@ -1,6 +1,5 @@
 package com.abdel.stockmanagement.domain.dto;
 
-import com.abdel.stockmanagement.domain.entities.Category;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
