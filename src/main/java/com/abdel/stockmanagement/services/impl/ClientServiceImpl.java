@@ -13,6 +13,7 @@ import com.abdel.stockmanagement.services.ClientService;
 import com.abdel.stockmanagement.validators.ArticleValidator;
 import com.abdel.stockmanagement.validators.ClientValidator;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,6 +27,12 @@ public class ClientServiceImpl implements ClientService {
 
     private ClientRepository repository;
     private Mapper<Client, ClientDto> mapper;
+
+    @Autowired
+    public ClientServiceImpl(ClientRepository repository, Mapper<Client, ClientDto> mapper) {
+        this.repository = repository;
+        this.mapper = mapper;
+    }
 
     @Override
     public ClientDto save(ClientDto dto) {
