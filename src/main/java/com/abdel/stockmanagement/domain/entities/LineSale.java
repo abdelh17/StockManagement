@@ -1,6 +1,8 @@
 package com.abdel.stockmanagement.domain.entities;
 
+import com.abdel.stockmanagement.domain.dto.ArticleDto;
 import lombok.*;
+import org.hibernate.mapping.Join;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -23,5 +25,10 @@ public class LineSale extends AbstractEntity{
     private BigDecimal quantity;
 
     private BigDecimal unitPrice;
+
+    @ManyToOne
+    @JoinColumn(name = "idarticle")
+    private Article article;
+    private Integer companyId;
 
 }

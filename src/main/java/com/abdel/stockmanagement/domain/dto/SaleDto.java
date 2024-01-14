@@ -20,4 +20,5 @@ public class SaleDto {
     private Instant dateSale;
 
     private String comment;
+    private List<LineSaleDto> linesSale;
 }

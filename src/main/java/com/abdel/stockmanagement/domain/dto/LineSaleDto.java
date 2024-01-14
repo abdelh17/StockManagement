@@ -16,6 +16,9 @@ public class LineSaleDto{
     private Integer id;
 
     private SaleDto sale;
+    private ArticleDto article;
+    private BigDecimal unitPrice;
+    private Integer companyId;
 
     private BigDecimal quantity;
 
