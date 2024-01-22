@@ -2,6 +2,7 @@ package com.abdel.stockmanagement.controllers.api;
 
 import com.abdel.stockmanagement.domain.dto.ClientDto;
 import com.abdel.stockmanagement.domain.dto.CompanyDto;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -16,9 +17,10 @@ import java.util.List;
 import static com.abdel.stockmanagement.utils.Constants.APP_ROOT;
 
 
+@Api(APP_ROOT + "/companies")
 public interface CompanyApi {
     @PostMapping(value = APP_ROOT + "/companies/create", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ApiOperation(value = "Save a comapany (edit or add)", response = CompanyDto.class)
+    @ApiOperation(value = "Save a company (edit or add)", response = CompanyDto.class)
     @ApiResponses(value = {@ApiResponse(code = 200, message = "The company is created/modified"), @ApiResponse(code = 400, message = "The company is not valid")})
     CompanyDto save(CompanyDto dto);
 

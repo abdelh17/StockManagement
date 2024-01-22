@@ -4,6 +4,7 @@ import com.abdel.stockmanagement.domain.dto.CategoryDto;
 import com.abdel.stockmanagement.domain.dto.CompanyDto;
 import com.abdel.stockmanagement.domain.dto.SupplierDto;
 import com.abdel.stockmanagement.domain.dto.UserDto;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -17,7 +18,7 @@ import java.util.List;
 
 import static com.abdel.stockmanagement.utils.Constants.APP_ROOT;
 
-
+@Api(APP_ROOT + "/users")
 public interface UserApi {
     @PostMapping(value = APP_ROOT + "/users/create", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "Save a user (edit or add)", response = UserDto.class)

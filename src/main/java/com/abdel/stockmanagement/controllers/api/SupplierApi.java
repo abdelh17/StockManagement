@@ -3,6 +3,7 @@ package com.abdel.stockmanagement.controllers.api;
 import com.abdel.stockmanagement.domain.dto.ClientDto;
 import com.abdel.stockmanagement.domain.dto.CompanyDto;
 import com.abdel.stockmanagement.domain.dto.SupplierDto;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.List;
 import static com.abdel.stockmanagement.utils.Constants.APP_ROOT;
 
+@Api(APP_ROOT + "/suppliers")
 
 public interface SupplierApi {
     @PostMapping(value = APP_ROOT + "/suppliers/create",consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
