@@ -3,7 +3,6 @@ package com.abdel.stockmanagement.controllers;
 import com.abdel.stockmanagement.controllers.api.ClientOrderApi;
 import com.abdel.stockmanagement.domain.dto.ClientOrderDto;
 import com.abdel.stockmanagement.services.ClientOrderService;
-import com.abdel.stockmanagement.services.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
